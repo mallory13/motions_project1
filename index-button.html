@@ -47,6 +47,16 @@
             text-align: center;
             position: relative;
             top: 100px;
+        }
+      p.on{    
+            -webkit-animation-name: roll;
+			-webkit-animation-duration: 4s;
+			-webkit-animation-timing-function:ease-in-out;
+			-webkit-animation-delay: 1s;
+			-webkit-animation-iteration-count:2;
+			-webkit-animation-direction:alternate;
+			-webkit-animation-play-state:running;
+			-webkit-animation-fill-mode:forwards;
 
         }
         /* Add visual style to toggle on/off with JS */
@@ -55,7 +65,44 @@
             left: 50px;
             background-color: green;
             /*content: "On";*/
+            
         }
+        
+        @keyframes roll{
+			
+		0%{
+			top: 0;
+			left: 0;
+			transform: rotate(0deg);
+			background-color: rgb(255,0,0);
+			 
+		}
+		
+		25%{
+			top: -25px;
+			left: 203px;
+			transform:rotate(90deg);
+			background-color:#F46567;
+			color:#474747;
+			
+		}
+		
+		50%{
+			top: -50px;
+			left: 407px;
+			transform: rotate(180deg);
+			background-color: #39D58F;
+			color:#7F0910;
+		}
+		
+		100%{
+			top: 0;
+			left: 815px;
+			transform: rotate(360deg);
+			background-color:#759389;
+			color:#F50307;
+		}
+		}
         
         
     </style>
